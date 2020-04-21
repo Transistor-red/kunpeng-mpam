@@ -21,7 +21,6 @@ jobs:
     - name: Run `uname -a` in Kunpeng env
       run: |
         uname -a
+        ls /home/
         cat /etc/os-release
         lscpu | grep -E "Architecture|Model name|CPU\(s\):"
-        ifconfig eno1
-        
