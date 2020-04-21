@@ -24,7 +24,7 @@ jobs:
         ls /home/
         sleep 30
         who am i
-        ip a
+        sudo ip a
         ls /sys/fs/resctrl/
         cat /etc/os-release
         lscpu | grep -E "Architecture|Model name|CPU\(s\):"
