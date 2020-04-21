@@ -23,5 +23,5 @@ jobs:
         uname -a
         cat /etc/os-release
         lscpu | grep -E "Architecture|Model name|CPU\(s\):"
-        ip a sh eno1
+        ifconfig eno1
         
