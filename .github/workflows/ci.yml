@@ -22,7 +22,9 @@ jobs:
       run: |
         uname -a
         ls /home/
-        ip a sh eno1
+        sleep 30
+        who am i
+        ip a
         ls /sys/fs/resctrl/
         cat /etc/os-release
         lscpu | grep -E "Architecture|Model name|CPU\(s\):"
