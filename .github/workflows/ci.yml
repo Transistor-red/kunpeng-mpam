@@ -21,6 +21,7 @@ jobs:
     - name: Run `uname -a` in Kunpeng env
       run: |
         uname -a
+        sudo cat /proc/cmdline 
         ls /sys/fs/resctrl/
         cat /etc/os-release
         lscpu | grep -E "Architecture|Model name|CPU\(s\):"
