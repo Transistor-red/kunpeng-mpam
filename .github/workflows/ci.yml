@@ -25,37 +25,6 @@ jobs:
         ls /sys/fs/resctrl/
         cat /etc/os-release
         lscpu | grep -E "Architecture|Model name|CPU\(s\):"
-        echo "ctrl group num test"
-        for((i=0;i<=99;i++));
-        do
-                sudo mkdir /sys/fs/resctrl/test_$i
-                if [ $? -eq 0 ]
-                then
-                        echo "success create ctrl group :test_$i "
-                else
-                        break
-                fi
-        done
-        echo "create num : $i"
-        cgroup_num_c=$(ls /sys/fs/resctrl|grep -c "test")
-
-        for((j=0;j<$i;j++));
-        do
-                sudo rmdir /sys/fs/resctrl/test_$j
-                if [ $? -eq 0 ]
-                then
-                        echo "success delete ctrl group :test_$j "
-                else
-                        break
-                fi
-        done
-
-        cgroup_num_d=$(ls /sys/fs/resctrl|grep -c "test")
-        if [ $cgroup_num_d -eq 0 -a $cgroup_num_c -ne 0 ]
-        then
-                echo "delete all ctrl group success  "
-        else
-                echo "delete all ctrl group fail  "
-                ls /sys/fs/resctrl
-        fi
-        echo "creat ctrl group max num is : $cgroup_num_c"
+        pwd
+        path_work=/home/github/actions-runner/_work/kunpeng-mpam/kunpeng-mpam/.github/workflows
+        
