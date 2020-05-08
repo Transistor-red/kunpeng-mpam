@@ -21,9 +21,9 @@ jobs:
     - name: Run `uname -a` in Kunpeng env
       run: |
         uname -a
+        cat /etc/os-release
         sudo cat /proc/cmdline 
         ls /sys/fs/resctrl/
-        cat /etc/os-release
         lscpu | grep -E "Architecture|Model name|CPU\(s\):"
         pwd
         path_work=/home/github/actions-runner/_work/kunpeng-mpam/kunpeng-mpam/.github/workflows
