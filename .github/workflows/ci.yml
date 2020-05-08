@@ -27,4 +27,6 @@ jobs:
         lscpu | grep -E "Architecture|Model name|CPU\(s\):"
         pwd
         path_work=/home/github/actions-runner/_work/kunpeng-mpam/kunpeng-mpam/.github/workflows
-        
+        sudo bash $path_work/ctrl_gnum_test.sh &> test_result.log
+        cat test_result.log
+        sudo rm -rf test_result.log
