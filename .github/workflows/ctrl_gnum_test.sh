@@ -1,4 +1,8 @@
 #!/bin/bash
+umount /sys/fs/resctrl/
+sleep 1
+mount -t resctrl resctrl /sys/fs/resctrl/
+sleep 1
 echo "ctrl group num test"
 cd /sys/fs/resctrl
 for((i=0;i<=99;i++));
