@@ -30,3 +30,4 @@ jobs:
         sudo bash $path_work/ctrl_gnum_test.sh &> test_result.log
         cat test_result.log
         sudo rm -rf test_result.log
+        echo "ctrl_gnum_test end"
